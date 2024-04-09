@@ -1,54 +1,57 @@
-# Predicting Customer Subscription to Personal Loan Offers
+# Health Insurance Fraud Claim Detection and Claim Amount Prediction
 
 ## Title and Author
-- **Project Title:** Predicting Customer Subscription to Personal Loan Offers
-- **Prepared for:** UMBC Data Science Master Degree Capstone by Dr. Chaojie (Jay) Wang
-- **Author Name:** Surya Prakash Reddy Gouni
-- **GitHub Profile:** https://github.com/surya61422
-- **LinkedIn Profile:** https://www.linkedin.com/in/surya-prakash-reddy-gouni-148011213/
+- **Project Title:** Health Insurance Fraud Claim Detection and Claim Amount Prediction
+- **Prepared for:** UMBC Data Science Master Degree Capstone by Ozgur Ozturk
+- **Author Name:** Deepak Nazari Sai
+- **GitHub Profile:** https://github.com/NazariSaiDeepak
+- **LinkedIn Profile:** https://www.linkedin.com/in/deepak-nazari-sai/
 
 ## Background
 ### What is it about?
-This project aims to predict whether customers will subscribe to personal loan offers provided by a bank based on various demographic and banking-related attributes.
+This project aims to develop a system that can detect whether a health insurance claim is fraudulent or not, as well as create a model capable of accurately predicting the amount of the claim based on user information.
 
 ### Why does it matter?
-Understanding the factors influencing customers' decisions to subscribe to personal loan offers can help banks optimize their marketing strategies and increase their loan business while retaining existing customers.
+Health insurance fraud claim prediction is crucial for protecting insurers from financial losses and maintaining trust in the system. Claim amount prediction ensures fair reimbursement, optimizing resource allocation, and providing better financial planning for insurance companies.
 
 ### Research Questions
 1. What demographic and banking-related factors influence customers' decisions to subscribe to personal loan offers?
 2. Can we accurately predict whether a customer will accept a personal loan offer?
-3. Which features have the most significant impact on predicting customer subscription to personal loan offers?
+3. Which features have the most significant impact on predicting customer claim amount to personal loan offers?
 
 ## Data
 ### Data Sources
 The dataset provided by the bank contains information on 5000 customers.
 
 ### Data Details
-- **Data Size:** 212 kb
-- **Data Shape:** 5000 rows, [Number of columns]
+- **Data Size:** 1.23 MD
+- **Data Shape:** 15000 rows, [Number of columns]
 - **Time Period:** Not specified
-- **Each Row Represents:** A customer's demographic and banking information, along with their response to the previous personal loan campaign.
+- **Each Row Represents:** A customer's demographic and insurance information, along with their response to the previous insurance campaign.
 
 ### Data Dictionary
 | Column Name        | Data Type | Definition                                                 | Potential Values                        |
 |--------------------|-----------|------------------------------------------------------------|-----------------------------------------|
-| ID                 | -         | Customer ID                                                | -                                       |
+| RID                | -         | Customer ID                                                | -                                       |
 | Age                | Numeric   | Customer's age in completed years                          | -                                       |
-| Experience         | Numeric   | Years of professional experience                           | -                                       |
-| Income             | Numeric   | Annual income of the customer (in thousand dollars)        | -                                       |
-| ZIP Code           | Numeric   | Home Address ZIP code                                      | -                                       |
-| Family             | Numeric   | Family size of the customer                                | -                                       |
-| CCAvg              | Numeric   | Average spending on credit cards per month (in thousand dollars) | -                                   |
-| Education          | Categorical | Education Level                                           | 1: Undergrad<br>2: Graduate<br>3: Advanced/Professional |
-| Mortgage           | Numeric   | Value of house mortgage if any (in thousand dollars)       | -                                       |
-| Personal Loan      | Binary    | Did this customer accept the personal loan offered in the last campaign? | Yes, No                          |
-| Securities Account | Binary    | Does the customer have a securities account with the bank?  | Yes, No                                |
-| CD Account         | Binary    | Does the customer have a certificate of deposit account with the bank? | Yes, No                            |
-| Online             | Binary    | Do customers use internet banking facilities?              | Yes, No                                |
-| Credit Card        | Binary    | Does the customer use a credit card issued by any other bank (excluding All life Bank)? | Yes, No |
+| Sum Insured        | Numeric   | Total Insurance amount that can be claimed                 | -                                       |
+| Sex                | Binary    | Gender of the customer                                     | M, F                                    |
+| Weight             | Numeric   | Weight of the customer                                     | -                                       |
+| BMI                | Numeric   | Body mass Indicator                                        | -                                       |
+| Hereditary diseases| String    | Existing Hereditary diseases                               | -                                       |
+| No of dependents   | Numeric   | No of dependents                                           | -                                       |
+| Smoker             | Binary    | Smoking History of the customer                            | 0, 1                                    |
+| city               | String    | City of the customer                                       | -                                       |
+| bloodpressure      | Numeric   | Blood pressure of the customer                             |                                         |
+| diabetes           | Binary    | Does the customer have a diabetes?                         | 0, 1                                    |
+| regular_ex         | Binary    | Do customers does regular execise?                         | 0, 1                                    |
+| job_title          | String    | Job title of customer                                      | -                                       |
+| claim              | Numeric   | Claim amount done by customer                              | -                                       |
+| Label              | Binary    | claim is fraudulent or not                                 | 0, 1                                    |
+
 
 ### Target Variable
-- **Personal Loan:** Did the customer accept the personal loan offered in the last campaign?
+- **Label:** claim is fraudulent or not
 
 ### Features/Predictors
-- Age, Experience, Income, ZIP Code, Family, CCAvg, Education, Mortgage, Securities Account, CD Account, Online, Credit Card
+- RID,Age,Sum Insured,Sex,Weight,BMI,Hereditary diseases,No of dependents,Smoker,city,bloodpressure,diabetes,regular_ex,job_title,claim,Label.
