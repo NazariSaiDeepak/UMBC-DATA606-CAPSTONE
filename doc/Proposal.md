@@ -15,13 +15,13 @@ This project aims to develop a system that can detect whether a health insurance
 Health insurance fraud claim prediction is crucial for protecting insurers from financial losses and maintaining trust in the system. Claim amount prediction ensures fair reimbursement, optimizing resource allocation, and providing better financial planning for insurance companies.
 
 ### Research Questions
-1. What demographic and banking-related factors influence customers' decisions to subscribe to personal loan offers?
-2. Can we accurately predict whether a customer will accept a personal loan offer?
-3. Which features have the most significant impact on predicting customer claim amount to personal loan offers?
+1. Can we accurately predict whether a customer's insurance claim is fraudulent or not?
+2. Can we accurately predict claim amount of customer based on customer details?
+3. Which features have the most significant impact on predicting customer Health Insurance claim amount and predicting claim is fraudulent or not ?
 
 ## Data
 ### Data Sources
-The dataset provided by the bank contains information on 5000 customers.
+The dataset provided by the Insurance companies contains information on 15000 customers.
 
 ### Data Details
 - **Data Size:** 1.23 MD
